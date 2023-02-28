@@ -1,4 +1,12 @@
 """
+get_token
+get_auth_header
+search_for_artist
+get_songs_by_artist
+get_available_markets_of_song
+convert_countries
+create_map
+main
 """
 import os
 import base64
@@ -98,8 +106,6 @@ def convert_countries(countries_list: list) -> dict:
                 country_name = 'Kosovo'
             else:
                 country_name = country.name
-        # print(country_name)
-        # print(country.official_name)
         try:
             location = geolocator.geocode(country_name)
             res.append([country_name, (location.latitude, location.longitude)])
